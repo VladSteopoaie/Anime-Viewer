@@ -25,7 +25,7 @@ anime
 -h, --help: Display usage information.  
 '''
 
-# Configuration file
+## Configuration file
 
 It should be located at /etc/anime/anime.conf. And the contents should look something like this:  
 
@@ -38,7 +38,7 @@ $animeEpisode=1
 
 The contents represent the default credentials if no input is provided. If there is no input for the episode the program uses the default credential and automatically goes to the next episode in the series.
 
-# Installation
+## Installation
 
 Go to the directory where you want to install the project and follow these commands:
 
