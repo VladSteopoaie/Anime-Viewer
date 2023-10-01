@@ -5,22 +5,31 @@ Anime Browser Opener is a command-line tool that allows you to open a web browse
 ## Usage
 
 anime -n "Titan" -s 1 -e 12  
+
 anime --name "Titan" --season 2 --episode 1  
+
 anime  
 
 ## Options
 
 -n, --name: Specify the name of the anime series  
+
 -s, --season: Specify the season or series season number  
+
 -e, --episode: Specify the episode number  
+
 -h, --help: Display usage information.  
+
 
 # Configuration file
 
 It should be located at /etc/anime/anime.conf. And the contents should look something like this:  
 
 $animeTitle=Titan  
+
 $animeSeason=1  
+
 $animeEpisode=1  
+
 
 The contents represent the default credentials if no input is provided. If there is no input for the episode the program uses the default credential and automatically goes to the next episode in the series.
