@@ -2,6 +2,10 @@
 
 Anime Browser Opener is a command-line tool that allows you to open a web browser to a specific episode and season of your favorite anime series, making it easier to continue watching where you left off. The credentials you provide are saved on a configuration file in /etc/anime/anime.conf so that you can use the command without flags and it will start the next episode in the series.
 
+## Available animes
+
+1. Attack on Titan (name for command: "Titan")
+
 ## Usage
 
 anime -n "Titan" -s 1 -e 12  
