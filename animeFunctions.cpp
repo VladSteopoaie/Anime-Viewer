@@ -125,7 +125,7 @@ bool ValidateEpisode(string &season, string &episode)
             result = (e >= 1 && e <= 12);
             break;
         case 4:
-            result = (e >= 1 && e <= 16);
+            result = (e >= 1 && e <= 28);
             break;
         default:
             result = false;
@@ -188,7 +188,7 @@ void TitanNextEpisode(string& season, string& episode)
     
     if (e == 12 && (s == 2 || s == 3))
         e = 1, s ++;
-    else if (e == 16 && s == 4)
+    else if (e == 28 && s == 4)
         s = 1, e = 1;
     else if (e == 25 && s == 1)
         e = 1, s ++;
@@ -216,13 +216,22 @@ void NextEpisode(string title, string& season, string& episode)
 string TitanUrl(string season, string episode)
 {
     string titanUrl = "https://ww4.gogoanime2.org/watch/shingeki-no-kyojin";
+    int e = stoi(episode);
+    
     if(season == "2")
         titanUrl += string("-season-2");
     else if (season == "3")
         titanUrl += string("-season-3");
-    else if (season == "4")
-        titanUrl += string("-the-final-season");
-    
+    else if (season == "4"){
+        if (e <= 16){
+            titanUrl += string("-the-final-season");
+        }
+        else{
+            titanUrl += string("-the-final-season-part-2");
+            e -= 16;
+            episode = to_string(e);
+        }
+    }
     titanUrl += string("/") + episode;
     
     return titanUrl;
